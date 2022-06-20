@@ -13,6 +13,6 @@ class Cms
 
     public function run()
     {
-        echo 'hello world';
+        print_r($this->di);
     }
 }
