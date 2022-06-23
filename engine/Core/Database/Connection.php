@@ -42,10 +42,11 @@ class Connection
         $sth->execute();
         $result = $sth->fetchAll(PDO::FETCH_ASSOC);
 
-        if ($result === false) {
-            return [];
-        }
+        // if ($result === false) {
+        //     return [];
+        // }
 
-        return $result;
+        // return $result;
+        return $result ? $result : [];
     }
 }
