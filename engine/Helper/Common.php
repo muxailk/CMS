@@ -2,19 +2,18 @@
 
 namespace Engine\Helper;
 
-class Common 
+class Common
 {
     static public function isPost()
     {
-        if ($_SERVER['REQUEST_METHOD'] == 'POST')
-        {
+        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             return true;
         }
 
         return false;
     }
 
-    static public function getMethod() 
+    static public function getMethod()
     {
         return $_SERVER['REQUEST_METHOD'];
     }
@@ -23,8 +22,7 @@ class Common
     {
         $pathUrl = $_SERVER['REQUEST_URI'];
 
-        if ($position = strpos($pathUrl, '?'))
-        {
+        if ($position = strpos($pathUrl, '?')) {
             $pathUrl = substr($pathUrl, 0, $position);
         }
 

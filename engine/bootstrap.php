@@ -12,15 +12,13 @@ try {
     $services = require __DIR__ . '/Config/Service.php';
 
     // Init services
-    foreach ($services as $service) 
-    {
+    foreach ($services as $service) {
         $provider = new $service($di);
         $provider->init();
     }
 
     $cms = new Cms($di);
     $cms->run();
-
 } catch (\ErrorException $e) {
     echo $e->getMessage();
 }

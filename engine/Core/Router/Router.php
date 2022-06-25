@@ -32,8 +32,7 @@ class Router
         if ($this->dispatcher == null) {
             $this->dispatcher = new UrlDispatcher();
 
-            foreach ($this->routes as $route)
-            {
+            foreach ($this->routes as $route) {
                 $this->dispatcher->register($route['method'], $route['pattern'], $route['controller']);
             }
         }
