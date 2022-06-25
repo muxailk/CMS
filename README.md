@@ -1,1 +1,1 @@
-# My own Content Management System
+# My Content Management System
